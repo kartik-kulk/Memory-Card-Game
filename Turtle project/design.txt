@@ -1,0 +1,14 @@
+The program first takes the name of the user (default N/A if left blank), and the number of cards they want to play with. The text window does not close till either 8, 10 or 12 is entered. After this, the game board renders with borders, wallpapers, buttons and the cards. Screen is divided in 4 sections:
+Play Area: Where the cards are placed and where any error gifs are displayed
+Leaderboard Area: Where the game leaderboards are displayed
+Status Area: Shows the current game status and describes any errors that happen during the game
+Buttons Area: Are where the quit and load buttons are.
+
+There are objects for cards, game entities (encoded as Buttons), borders
+Missing game files prompt appropriate game errors - A unique error GIF for missing leaderboard, config and pictures.txt each, and these are displayed during the game rendering part. If an error has encountered, there is an error animation displaying the gif image for 3-4 seconds and then the game exits. Pressing quit renders a small animation and rolls credits before it quits 
+
+The leaderboards display the top 8 scores of the file (if there are at least 8 records), else it displays the top scores only. There is a unique layout of cards for 8, 10 and 12 cards such that the play area looks symmetrical. Winning the game updates the leaderboard file with your score, rolls credits, shows a victory gif image and then quits the game. The leaderboards file stores scores in the format 'name guesses' on each line, and the config and pictures file store the names of the GIF images used in the code line by line.
+
+For using the load button, ensure that the config file entered and its constituent gif images actually exist in the same directory as the game. Clicking the load button prompts an input box requesting the filename. The file must contain data with the gif names of each card of the deck with one name on a line, no spaces or empty lines in between. The game considers only the first few required images for the card design, and ignores the rest. Also ensure the end of the document has no empty lines. I have included the file "user_config.txt" containing 5 gif images of ______ as a playable deck. To use this deck, loadup the game with either 8 or 10 cards, then click the load button, and type user_config.txt. To test with a 6 card deck, add the gif XXXX to a new line in user_config.txt, and run the game again with 12 cards to match
+
+One more important thing is to ensure that the input file has sufficient cards to cover each card that the user is playing with. For example, if the user is currently playing with 12 cards for 6 matches, and the input file only has 5 images, then the game renders a error gif to the user. For the case of wrong input file or no input, the game renders an error animation and the game continues. (Any cards flipped before pressing load will remain flipped even after rendering animations) 

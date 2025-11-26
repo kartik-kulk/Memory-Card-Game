@@ -1,0 +1,11 @@
+card_back.gif
+quitbutton.gif
+loadbutton.gif
+file_error.gif
+leaderboard_error.gif
+quitmsg.gif
+winner.gif
+play_bg.gif
+leaderboard_bg.gif
+status_bg.gif
+buttons_bg.gif
